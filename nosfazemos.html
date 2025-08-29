@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serviços Personalizados - Nós Fazemos Por Você</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-bg {
+      background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    #requestForm {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+  <!-- Header/Navigation -->
+  <header class="gradient-bg text-white shadow-lg">
+    <div class="container mx-auto px-4 py-6">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-hands-helping text-3xl"></i>
+          <h1 class="text-2xl font-bold">Nós Fazemos</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#services" class="hover:text-blue-200 transition">Serviços</a>
+          <a href="#how-it-works" class="hover:text-blue-200 transition">Como Funciona</a>
+          <a href="#testimonials" class="hover:text-blue-200 transition">Depoimentos</a>
+          <a href="#contact" class="hover:text-blue-200 transition">Contato</a>
+        </nav>
+        <button class="md:hidden text-2xl" id="menuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="md:hidden hidden py-4" id="mobileMenu">
+        <a href="#services" class="block py-2 hover:bg-blue-700 px-2 rounded">Serviços</a>
+        <a href="#how-it-works" class="block py-2 hover:bg-blue-700 px-2 rounded">Como Funciona</a>
+        <a href="#testimonials" class="block py-2 hover:bg-blue-700 px-2 rounded">Depoimentos</a>
+        <a href="#contact" class="block py-2 hover:bg-blue-700 px-2 rounded">Contato</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="gradient-bg text-white py-20">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">Precisa de ajuda com algo? Nós fazemos por você!</h2>
+        <p class="text-xl mb-8">Conte-nos o que você precisa e nós encontraremos a melhor solução. Seja um serviço pequeno ou grande, estamos aqui para ajudar.</p>
+        <a href="#requestForm" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 inline-block">Solicitar Serviço</a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Casal trabalhando juntos" class="rounded-lg shadow-2xl max-w-md w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">O Que Podemos Fazer Por Você</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Oferecemos diversos tipos de serviços. Se não estiver na lista, nos pergunte!</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="service-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="text-blue-600 mb-4">
+            <i class="fas fa-laptop-code text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Serviços Digitais</h3>
+          <p class="text-gray-600 mb-4">Digitação, organização de arquivos, pesquisa online, criação de apresentações e mais.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Digitação de documentos</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Organização de planilhas</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Pesquisa na internet</li>
+          </ul>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="text-blue-600 mb-4">
+            <i class="fas fa-edit text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Serviços Criativos</h3>
+          <p class="text-gray-600 mb-4">Redação, revisão de textos, traduções simples, criação de conteúdo e mais.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Revisão de trabalhos</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Redação de textos</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Traduções simples</li>
+          </ul>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card bg-white rounded-lg shadow-md p-6 border border-gray-100 transition duration-300">
+          <div class="text-blue-600 mb-4">
+            <i class="fas fa-headset text-4xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Serviços Pessoais</h3>
+          <p class="text-gray-600 mb-4">Agendamentos, reservas, compras online, organização de eventos e mais.</p>
+          <ul class="text-sm text-gray-500 space-y-1">
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Agendamentos online</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Reservas de restaurantes</li>
+            <li><i class="fas fa-check text-green-500 mr-2"></i> Pesquisa de produtos</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-600 mb-4">Não encontrou o que precisa? Nos diga o que você está procurando!</p>
+        <a href="#requestForm" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 inline-block">Pedir Algo Diferente</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">Como Funciona</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Um processo simples para você conseguir o que precisa</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="text-center">
+          <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold">1</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Você Solicita</h3>
+          <p class="text-gray-600">Nos conte detalhadamente o que você precisa que seja feito. Quanto mais informações, melhor!</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center">
+          <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold">2</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Nós Avaliamos</h3>
+          <p class="text-gray-600">Analisamos seu pedido e informamos se podemos ajudar, com prazo e valor estimado.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold">3</span>
+          </div>
+          <h3 class="text-xl font-bold mb-3">Trabalhamos Juntos</h3>
+          <p class="text-gray-600">Executamos o serviço e mantemos você informado sobre o progresso até a entrega final.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 gradient-bg text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">O Que Dizem Sobre Nós</h2>
+      <p class="text-center max-w-2xl mx-auto mb-12 text-blue-100">Feedback de clientes que já utilizaram nossos serviços</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-400 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">A</div>
+            <div>
+              <h4 class="font-bold">Ana Clara</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>"Precisei de ajuda para fazer uma arte no canva, eu estava desesperado e eles fizeram um excelente trabalho, superando minhas expectativas! salvaram meu emprego!"</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-400 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">R</div>
+            <div>
+              <h4 class="font-bold">Ricardo</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p>"Não tinha tempo para pesquisar presentes de Natal e eles não só encontraram ótimas opções como ainda negociaram descontos para mim! eles me manteve informada de tudo mesmo. excelente!"</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <div class="bg-blue-400 w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">M</div>
+            <div>
+              <h4 class="font-bold">Mariana</h4>
+              <div class="flex text-yellow-400">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p>"Contratei para revisar minha escrita e fiquei impressionada com a qualidade do trabalho. Fizeram sugestões que realmente melhoraram meu texto."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request Form Section -->
+  <section id="requestForm" class="py-20 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl font-bold text-center mb-4">Solicite Seu Serviço</h2>
+      <p class="text-gray-600 text-center mb-12">Preencha o formulário abaixo com detalhes sobre o que você precisa</p>
+
+      <form class="bg-gray-50 rounded-lg shadow-md p-8" action="https://formsubmit.co/daniel33449f@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-gray-700 font-medium mb-2">Seu Nome</label>
+            <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 font-medium mb-2">Seu Email</label>
+            <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <label for="serviceType" class="block text-gray-700 font-medium mb-2">Tipo de Serviço (se souber)</label>
+          <select id="serviceType" name="serviceType" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option value="">Selecione uma opção</option>
+            <option value="digital">Serviço Digital</option>
+            <option value="creative">Serviço Criativo</option>
+            <option value="personal">Serviço Pessoal</option>
+            <option value="other">Outro</option>
+          </select>
+        </div>
+
+        <div class="mt-6">
+          <label for="requestDetails" class="block text-gray-700 font-medium mb-2">Detalhes do Pedido*</label>
+          <textarea id="requestDetails" name="requestDetails" rows="6" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Descreva com o máximo de detalhes possível o que você precisa que seja feito..."></textarea>
+        </div>
+
+        <div class="mt-6">
+          <label for="deadline" class="block text-gray-700 font-medium mb-2">Prazo Desejado (opcional)</label>
+          <input type="date" id="deadline" name="deadline" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div class="mt-8">
+          <button type="submit" class="gradient-bg text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition duration-300 w-full md:w-auto">
+            Enviar Solicitação
+          </button>
+        </div>
+
+        <p class="text-sm text-gray-500 mt-4">*Nós avaliaremos seu pedido e entraremos em contato em até 24 horas para confirmar se podemos ajudar e informar sobre valores e prazos.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+        <h2 class="text-3xl font-bold mb-6">Sobre Nós</h2>
+        <p class="text-gray-600 mb-4">Somos um casal que decidiu oferecer ajuda profissional para quem precisa de serviços diversos. Combinamos nossas habilidades para atender da melhor forma possível.</p>
+        <p class="text-gray-600 mb-6">Acreditamos que todo mundo precisa de ajuda às vezes, e estamos aqui para tornar sua vida mais fácil com serviços personalizados e atenção aos detalhes.</p>
+        <div class="flex items-center space-x-4">
+          <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+            <i class="fas fa-check-circle text-xl"></i>
+          </div>
+          <p class="text-gray-600">Comprometimento com a qualidade</p>
+        </div>
+        <div class="flex items-center space-x-4 mt-3">
+          <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+            <i class="fas fa-heart text-xl"></i>
+          </div>
+          <p class="text-gray-600">Atendimento personalizado</p>
+        </div>
+        <div class="flex items-center space-x-4 mt-3">
+          <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+            <i class="fas fa-lock text-xl"></i>
+          </div>
+          <p class="text-gray-600">Confidencialidade garantida</p>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <img src="https://images.unsplash.com/photo-1529333166447-4b0933666e1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Casal trabalhando juntos" class="rounded-lg shadow-xl max-w-md w-full">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">Entre em Contato</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Tem dúvidas ou quer saber mais sobre nossos serviços? Fale conosco!</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+        <div>
+          <h3 class="text-xl font-bold mb-6">Informações de Contato</h3>
+
+          <div class="flex items-start mb-6">
+            <div class="text-blue-600 mr-4 mt-1">
+              <i class="fas fa-envelope text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Email</h4>
+              <p class="text-gray-600">nosfazemos488@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-start mb-6">
+            <div class="text-blue-600 mr-4 mt-1">
+              <i class="fas fa-phone-alt text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Telefone</h4>
+              <p class="text-gray-600">(31) 99088-2413</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="text-blue-600 mr-4 mt-1">
+              <i class="fas fa-clock text-xl"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Horário de Atendimento</h4>
+              <p class="text-gray-600">Segunda a Sexta: 9h às 18h</p>
+              <p class="text-gray-600">Sábado: 9h às 12h</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold mb-6">Redes Sociais</h3>
+          <p class="text-gray-600 mb-6">Nos siga nas redes sociais para ficar por dentro de novidades e promoções!</p>
+
+          <div class="flex space-x-4">
+            <a href="#" class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+              <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a href="#" class="bg-pink-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="bg-blue-400 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-700 transition">
+              <i class="fab fa-whatsapp text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Methods -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4">Formas de Pagamento</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Aceitamos diversas formas de pagamento para sua comodidade</p>
+
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+          <i class="fab fa-cc-paypal text-4xl text-blue-500"></i>
+          <span class="ml-3 font-medium">PayPal</span>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+          <i class="fab fa-cc-visa text-4xl text-blue-900"></i>
+          <span class="ml-3 font-medium">Visa</span>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+          <i class="fab fa-cc-mastercard text-4xl text-red-500"></i>
+          <span class="ml-3 font-medium">Mastercard</span>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+          <i class="fas fa-barcode text-4xl text-gray-700"></i>
+          <span class="ml-3 font-medium">Boleto</span>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
+          <i class="fas fa-money-bill-wave text-4xl text-green-500"></i>
+          <span class="ml-3 font-medium">PIX</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="gradient-bg text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-hands-helping text-3xl"></i>
+            <h2 class="text-2xl font-bold">Nós Fazemos</h2>
+          </div>
+          <p class="mt-2 text-blue-100">Soluções personalizadas para suas necessidades</p>
+        </div>
+
+        <div class="flex flex-col items-center md:items-end">
+          <p class="mb-4 text-blue-100">© 2023 Nós Fazemos. Todos os direitos reservados.</p>
+          <div class="flex space-x-6">
+            <a href="#" class="hover:text-blue-200 transition">Termos de Serviço</a>
+            <a href="#" class="hover:text-blue-200 transition">Política de Privacidade</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition hidden">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopBtn.classList.remove('hidden');
+      } else {
+        backToTopBtn.classList.add('hidden');
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+          // Close mobile menu if open
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
