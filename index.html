@@ -236,16 +236,16 @@
       <h2 class="text-3xl font-bold text-center mb-4">Solicite Seu Serviço</h2>
       <p class="text-gray-600 text-center mb-12">Preencha o formulário abaixo com detalhes sobre o que você precisa</p>
 
-      <form class="bg-gray-50 rounded-lg shadow-md p-8" action="https://formsubmit.co/daniel33449f@gmail.com" method="POST">
+      <form class="bg-gray-50 rounded-lg shadow-md p-8" action="https://formsubmit.co/nosfazemos488@gmail.com" method="POST" onsubmit="sendToWhatsApp()">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
+        <input type="hidden" name="_next" value="https://api.whatsapp.com/send?phone=5531990882413&text=Obrigado%20por%20solicitar%20nosso%20servi%C3%A7o!%20Aguarde%20nosso%20contato%20para%20maiores%20detalhes.">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label for="name" class="block text-gray-700 font-medium mb-2">Seu Nome</label>
             <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
           <div>
-            <label for="email" class="block text-gray-700 font-medium mb-2">Seu Email e Telefone de contato</label>
+            <label for="email" class="block text-gray-700 font-medium mb-2">Seu Email</label>
             <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
           </div>
         </div>
@@ -339,6 +339,16 @@
               <i class="fas fa-phone-alt text-xl"></i>
             </div>
             <div>
+              <h4 class="font-bold text-gray-800">Telefone/WhatsApp</h4>
+              <p class="text-gray-600">(31) 99088-2413</p>
+            </div>
+          </div>
+
+          <div class="flex items-start mb-6">
+            <div class="text-blue-600 mr-4 mt-1">
+              <i class="fas fa-phone-alt text-xl"></i>
+            </div>
+            <div>
               <h4 class="font-bold text-gray-800">Telefone</h4>
               <p class="text-gray-600">(31) 99088-2413</p>
             </div>
@@ -361,16 +371,16 @@
           <p class="text-gray-600 mb-6">Nos siga nas redes sociais para ficar por dentro de novidades e promoções!</p>
 
           <div class="flex space-x-4">
-            <a href="#" class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+            <a href="https://facebook.com/seulink" class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
               <i class="fab fa-facebook-f text-xl"></i>
             </a>
-            <a href="#" class="bg-pink-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+            <a href="https://instagram.com/seulink" class="bg-pink-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
               <i class="fab fa-instagram text-xl"></i>
             </a>
-            <a href="#" class="bg-blue-400 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+            <a href="https://twitter.com/seulink" class="bg-blue-400 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
               <i class="fab fa-twitter text-xl"></i>
             </a>
-            <a href="#" class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-700 transition">
+            <a href="https://wa.me/5531990882413" class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-green-700 transition">
               <i class="fab fa-whatsapp text-xl"></i>
             </a>
           </div>
@@ -382,31 +392,20 @@
   <!-- Payment Methods -->
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-4">Formas de Pagamento</h2>
-      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">Aceitamos diversas formas de pagamento para sua comodidade</p>
+      <h2 class="text-3xl font-bold text-center mb-4">Forma de Pagamento</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-6">Aceitamos apenas PIX para maior segurança de ambas as partes</p>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">O pagamento é dividido em 2 partes: 50% no início do serviço e 50% na entrega</p>
 
-      <div class="flex flex-wrap justify-center gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
-          <i class="fab fa-cc-paypal text-4xl text-blue-500"></i>
-          <span class="ml-3 font-medium">PayPal</span>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
-          <i class="fab fa-cc-visa text-4xl text-blue-900"></i>
-          <span class="ml-3 font-medium">Visa</span>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
-          <i class="fab fa-cc-mastercard text-4xl text-red-500"></i>
-          <span class="ml-3 font-medium">Mastercard</span>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
-          <i class="fas fa-barcode text-4xl text-gray-700"></i>
-          <span class="ml-3 font-medium">Boleto</span>
-        </div>
+      <div class="flex justify-center">
         <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center">
           <i class="fas fa-money-bill-wave text-4xl text-green-500"></i>
           <span class="ml-3 font-medium">PIX</span>
         </div>
       </div>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mt-8">
+        Chave PIX: (31) 99088-2413 (Celular)<br>
+        Nome: Nós Fazemos Por Você
+      </p>
     </div>
   </section>
 
@@ -425,8 +424,8 @@
         <div class="flex flex-col items-center md:items-end">
           <p class="mb-4 text-blue-100">© 2023 Nós Fazemos. Todos os direitos reservados.</p>
           <div class="flex space-x-6">
-            <a href="#" class="hover:text-blue-200 transition">Termos de Serviço</a>
-            <a href="#" class="hover:text-blue-200 transition">Política de Privacidade</a>
+            <a href="termos.html" class="hover:text-blue-200 transition">Termos de Serviço</a>
+            <a href="privacidade.html" class="hover:text-blue-200 transition">Política de Privacidade</a>
           </div>
         </div>
       </div>
@@ -439,6 +438,22 @@
   </button>
 
   <script>
+    function sendToWhatsApp() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const serviceType = document.getElementById('serviceType').value;
+      const requestDetails = document.getElementById('requestDetails').value;
+      const deadline = document.getElementById('deadline').value;
+      
+      const whatsappMessage = `Nova Solicitação de Serviço:\n\nNome: ${name}\nEmail/Telefone: ${email}\nTipo de Serviço: ${serviceType || 'Não especificado'}\nPrazo: ${deadline || 'Não especificado'}\nDetalhes:\n${requestDetails}`;
+      
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      
+      // Open WhatsApp in a new tab with the pre-filled message
+      window.open(`https://api.whatsapp.com/send?phone=5531990882413&text=${encodedMessage}`, '_blank');
+    }
+
     // Mobile Menu Toggle
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
